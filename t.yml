@@ -1,0 +1,23 @@
+
+#Replace these two blocks with
+- name: AddHAproxy reporistory 
+  become: yes
+  apt_repository:
+    repo: 'ppa:vbernat/haproxy-2.4'
+  tags: [ setup, haproxy ]
+
+- name: HAProxy installation
+  become: yes
+  apt: 
+    name: haproxy=2.4.12-1ppa1~bionic
+    update_cache: yes
+    state: present
+  tags: [ setup, haproxy ]
+
+# this block, urls here are public url of the deb package you uploaded to cloud storage
+- name: Install a .deb package from the internet
+  apt:
+    deb: “{{ item }}”
+  with_items:
+    - url1
+    - url2
