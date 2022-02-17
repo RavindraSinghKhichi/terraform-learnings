@@ -1,6 +1,7 @@
 terraform {
   # Deploy version v0.0.3 in stage
-  source = "git::git@github.com:RavindraSinghKhichi/terraform-learnings.git//ec2?ref=v0.0.2"
+  #give full path always in dir like modules/ec2
+  source = "git::git@github.com:RavindraSinghKhichi/terraform-learnings.git///modules/ec2?ref=v0.0.2"
 }
 
 inputs = {
