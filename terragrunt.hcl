@@ -1,3 +1,5 @@
+# This root level terragrunt.hcl provides definition for Remote state and provider
+
 remote_state {
   backend = "s3"
   generate = {
