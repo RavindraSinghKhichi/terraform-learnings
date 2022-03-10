@@ -21,8 +21,13 @@ generate "provider" {
    terraform {
     required_providers {
         aws = {
-        source  = "hashicorp/aws" #short hand to registry.terraform.io/hashicorp/aws
-        version = "4.0.0"
+          source  = "hashicorp/aws" #short hand to registry.terraform.io/hashicorp/aws
+          version = "4.0.0"
+        }
+
+        template = {
+          source = "hashicorp/template"
+          version = "2.2.0"
         }
     }
     }

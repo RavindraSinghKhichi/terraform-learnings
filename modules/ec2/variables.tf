@@ -5,5 +5,7 @@ variable "instance_name" {
 
 variable "instance_type" {
   type = string
+  description = "Type of the ec2 instance i want to create"
   default = "t3.micro"
 }
+
